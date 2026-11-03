@@ -1,0 +1,28 @@
+name: Dependency licence triage
+
+on:
+  pull_request:
+    paths:
+      - "package.json"
+      - "package-lock.json"
+      - "automation/scan_licenses.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-licences:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install project dependencies
+        run: npm ci --ignore-scripts
+      - name: Create npm licence report
+        run: npx --yes license-checker --production --json > licenses.json
+      - name: Flag unknown or non-allowlisted licences
+        run: python3 automation/scan_licenses.py licenses.json

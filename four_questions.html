@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { 
+      width: 1280px; 
+      min-height: 720px; 
+      background: #F7F5F0; 
+      display: flex; 
+      flex-direction: column; 
+      padding: 0 60px;
+      padding-top: 60px;
+      font-family: 'Inter', sans-serif;
+      color: #334155;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      color: #1A2C42;
+      margin-bottom: 40px;
+    }
+    .grid-2x2 {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 30px;
+    }
+    .card {
+      background: #EBE9E2;
+      padding: 30px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      color: #1A2C42;
+    }
+    .card-header i {
+      font-size: 24px;
+      margin-right: 12px;
+      color: #2C7A7B;
+    }
+    .card-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .card-body {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .footer-rule {
+      width: 100%;
+      height: 2px;
+      background: #D97706;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .footer-text {
+      font-size: 14px;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <h2>Four questions that must stay separate</h2>
+    <div class="grid-2x2">
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-file-contract"></i>
+          <span class="card-title">1. Contract Ownership</span>
+        </div>
+        <div class="card-body">
+          What does the provider's TOS say about input and output? Many disclaim ownership or assign rights, but this is a private agreement, not a law.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-copyright"></i>
+          <span class="card-title">2. Copyrightability</span>
+        </div>
+        <div class="card-body">
+          Does the work meet the human-authorship bar? In the US, purely AI-generated work without human control over expressive elements is not protected.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-user-shield"></i>
+          <span class="card-title">3. Third-Party Rights</span>
+        </div>
+        <div class="card-body">
+          Does the output reproduce protected material or likenesses? "Provider disclaims ownership" does not clear you of infringement risk.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-list-check"></i>
+          <span class="card-title">4. Plan & Use Rules</span>
+        </div>
+        <div class="card-body">
+          Does your specific plan (Free vs Business) allow commercial use? Are there student/academic restrictions or regional rule variations?
+        </div>
+      </div>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-text">
+      Source: USCO Report (2025); OpenAI/Anthropic/Google Terms (Nov 2026)
+    </div>
+  </div>
+</body>
+</html>

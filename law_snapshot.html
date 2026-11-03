@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { 
+      width: 1280px; 
+      min-height: 720px; 
+      background: #F7F5F0; 
+      display: flex; 
+      flex-direction: column; 
+      padding: 0 60px;
+      padding-top: 60px;
+      font-family: 'Inter', sans-serif;
+      color: #334155;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      color: #1A2C42;
+      margin-bottom: 40px;
+    }
+    .columns {
+      flex: 1;
+      display: flex;
+      gap: 40px;
+    }
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .column-label {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2C7A7B;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #2C7A7B;
+      padding-bottom: 8px;
+    }
+    .column-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #1A2C42;
+      margin-bottom: 20px;
+    }
+    .column-body {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .column-body p {
+      margin-bottom: 16px;
+    }
+    .caution-note {
+      margin-top: auto;
+      padding: 16px;
+      background: #EBE9E2;
+      font-size: 18px;
+      font-style: italic;
+      border-radius: 4px;
+    }
+    .footer-rule {
+      width: 100%;
+      height: 2px;
+      background: #D97706;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .footer-text {
+      font-size: 14px;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <h2>Three jurisdictions, careful conclusions</h2>
+    <div class="columns">
+      <div class="column">
+        <div class="column-label">United States</div>
+        <div class="column-title">Human Authorship</div>
+        <div class="column-body">
+          <p>USCO's report says protection requires <strong>human expressive choices</strong>; purely AI-generated material without enough human control is not protected under its analysis.</p>
+          <p>The 2025 report says prompts alone were insufficient for the technology examined; human selection and arrangement are assessed case-by-case.</p>
+        </div>
+        <div class="caution-note">USCO Part 2 Report (2025)</div>
+      </div>
+      <div class="column">
+        <div class="column-label">India</div>
+        <div class="column-title">Statutory Author</div>
+        <div class="column-body">
+          <p>Act defines author as <strong>"the person who causes the work to be created"</strong> for computer-generated works.</p>
+          <p>Statute predates modern GenAI; application to specific prompting remains an interpretive question.</p>
+        </div>
+        <div class="caution-note">Copyright Act 1957 §2(d)(vi)</div>
+      </div>
+      <div class="column">
+        <div class="column-label">European Union</div>
+        <div class="column-title">Provider Duties</div>
+        <div class="column-body">
+          <p>AI Act imposes <strong>transparency and copyright policy</strong> duties on model providers.</p>
+          <p>GPAI obligations became applicable Aug 2025. These are provider rules, not an automatic user licence.</p>
+        </div>
+        <div class="caution-note">EU AI Act (GPAI Rules 2025)</div>
+      </div>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-text">
+      Legal snapshots reflect official guidance as of Nov 2026. Local laws vary.
+    </div>
+  </div>
+</body>
+</html>

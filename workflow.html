@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { 
+      width: 1280px; 
+      min-height: 720px; 
+      background: #F7F5F0; 
+      display: flex; 
+      flex-direction: column; 
+      padding: 0 60px;
+      padding-top: 60px;
+      font-family: 'Inter', sans-serif;
+      color: #334155;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      color: #1A2C42;
+      margin-bottom: 60px;
+    }
+    .workflow-steps {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+    .step-connector {
+      position: absolute;
+      top: 40px;
+      left: 60px;
+      right: 60px;
+      height: 2px;
+      background: #EBE9E2;
+      z-index: 1;
+    }
+    .step {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      z-index: 2;
+    }
+    .step-icon {
+      width: 80px;
+      height: 80px;
+      background: #EBE9E2;
+      border: 2px solid #1A2C42;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: #1A2C42;
+      font-size: 30px;
+    }
+    .step.active .step-icon {
+      background: #2C7A7B;
+      color: #F7F5F0;
+      border-color: #2C7A7B;
+    }
+    .step-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1A2C42;
+      margin-bottom: 12px;
+    }
+    .step-desc {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .step-desc strong { color: #D97706; }
+    .footer-rule {
+      width: 100%;
+      height: 2px;
+      background: #D97706;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .footer-text {
+      font-size: 14px;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <h2>The five-check release workflow</h2>
+    <div class="workflow-steps">
+      <div class="step-connector"></div>
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-keyboard"></i></div>
+        <div class="step-title">1. Inputs</div>
+        <div class="step-desc">Redact <strong>secrets/PII</strong>. Own the rights to provided prompts.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-file-invoice"></i></div>
+        <div class="step-title">2. Terms</div>
+        <div class="step-desc">Check <strong>commercial use</strong> rules for your exact plan.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-pen-nib"></i></div>
+        <div class="step-title">3. Control</div>
+        <div class="step-desc">Record <strong>human edits</strong> and expressive choices.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-magnifying-glass"></i></div>
+        <div class="step-title">4. Similarity</div>
+        <div class="step-desc">Search <strong>distinctive code</strong> and text for matches.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-barcode"></i></div>
+        <div class="step-title">5. Licences</div>
+        <div class="step-desc">Check <strong>dependencies</strong>. Keep notices. Attribute AI.</div>
+      </div>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-text">
+      Tip: Use a dated prompt log as evidence of process.
+    </div>
+  </div>
+</body>
+</html>

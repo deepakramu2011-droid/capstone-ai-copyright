@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { 
+      width: 1280px; 
+      min-height: 720px; 
+      background: #F7F5F0; 
+      display: flex; 
+      flex-direction: column; 
+      padding: 0 60px;
+      padding-top: 60px;
+      font-family: 'Inter', sans-serif;
+      color: #334155;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      color: #1A2C42;
+      margin-bottom: 40px;
+    }
+    .split-layout {
+      flex: 1;
+      display: flex;
+      gap: 60px;
+    }
+    .left-side {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+    }
+    .code-block {
+      background: #EBE9E2;
+      padding: 24px;
+      border-radius: 4px;
+      font-family: 'Fira Code', monospace;
+      font-size: 18px;
+      line-height: 1.4;
+      flex: 1;
+      border: 1px solid #1A2C42;
+    }
+    .code-comment { color: #2C7A7B; }
+    .code-string { color: #D97706; }
+    .right-side {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+    }
+    .checklist-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #1A2C42;
+      margin-bottom: 24px;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .check-item i {
+      color: #2C7A7B;
+      margin-right: 16px;
+      margin-top: 4px;
+    }
+    .disclosure-box {
+      margin-top: auto;
+      background: #1A2C42;
+      color: #F7F5F0;
+      padding: 24px;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+    .disclosure-box strong { color: #D97706; }
+    .footer-rule {
+      width: 100%;
+      height: 2px;
+      background: #D97706;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .footer-text {
+      font-size: 14px;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <h2>Apply the rule; disclose the process</h2>
+    <div class="split-layout">
+      <div class="left-side">
+        <div class="code-block" style="white-space: pre-wrap;">
+<span class="code-comment">$ python3 automation/scan_licenses.py licenses.json</span>
+REVIEW REQUIRED — not auto-approved:
+- copyleft-demo@1.0.0: GPL-3.0-only
+- unknown-demo@1.0.0: UNKNOWN
+
+<span class="code-comment">Human review required; this is not legal clearance.</span>
+        </div>
+        <p style="margin-top: 16px; font-size: 18px; font-style: italic;">
+          The demo flags uncertainty instead of pretending to decide licence compatibility.
+        </p>
+      </div>
+      <div class="right-side">
+        <div class="checklist-title">Closing Action Items</div>
+        <div class="check-item"><i class="fas fa-square-check"></i><span>Add your name, team, and course details to the report.</span></div>
+        <div class="check-item"><i class="fas fa-square-check"></i><span>Verify official sources on the submission date.</span></div>
+        <div class="check-item"><i class="fas fa-square-check"></i><span>Run the licence scan demo on your project.</span></div>
+        <div class="check-item"><i class="fas fa-square-check"></i><span>Add a short "AI Skills Used" note.</span></div>
+        <div class="disclosure-box">
+          <strong>Disclose AI assistance honestly.</strong> A process log helps explain decisions; it does not guarantee rights.
+        </div>
+      </div>
+    </div>
+    <div class="footer-rule"></div>
+    <div class="footer-text">
+      CSE Capstone 55 • Final Briefing Summary
+    </div>
+  </div>
+</body>
+</html>
